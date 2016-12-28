@@ -1,0 +1,96 @@
+{
+	//
+	//	Main macro section
+	//
+	"macroprofile": {
+			"prefix": "MacroProfile",
+			"body":	[
+			"<\?xml version=\"1.0\" encoding=\"UTF-8\"\?>",
+			"<Profile majorVersion=\"1\" minorVersion=\"3\" product=\"ATEM Television Studio\">"
+			"	<MacroPool>",
+			"		<Macro id=\"0\" name=\"${1:name}\" description=\"${2:description}\">",
+			"		</Macro>",
+			"	</MacroPool>",
+			"	<MacroControl loop=\"False\"/>",
+			"</profile>",
+			],
+			"description" : "Create a new XML file dedicated to a macro profile"
+	},
+	"macro": {
+			"prefix": "Macro",
+			"body":	[
+			"<Macro id=\"${1:id}\" name=\"${2:name}\" description=\"${3:description}\">",
+			"</Macro>",
+			],
+			"description" : "Insert a new ATEM Macro"
+	},
+	"MacroSleep": {
+			"prefix": "Macrosleep",
+			"body": "<Op id=\"MacroSleep\" frames=\"${1:frames}\"/>",
+			"description" : "Insert a sleep command"
+	},
+	//
+	// Mixer operations
+	//
+	"PreviewInput": {
+			"prefix": "Previewinput",
+			"body": "<Op id=\"PreviewInput\" mixEffectBlockIndex=\"${1:0}\" input=\"${2:input}\" />",
+			"description" : "Select preview input"
+	},
+	"ProgramInput": {
+			"prefix": "Programinput",
+			"body": "<Op id=\"ProgramInput\" mixEffectBlockIndex=\"${1:0}\" input=\"${2:input}\" />",
+			"description" : "Select program input"
+	},
+	"cut": {
+			"prefix": "Cut",
+			"body": "<Op id=\"Cut\" mixEffectBlockIndex=\"${1:0}\" />",
+			"description" : "Select program input"
+	},
+	"Autotransition": {
+			"prefix": "Autotransition",
+			"body": "<Op id=\"Autotransition\" mixEffectBlockIndex=\"${1:0}\" />",
+			"description" : "Select program input"
+	},
+	"TransitionSource": {
+			"prefix": "TransitionSource",
+			"body": "<Op id=\"TransitionSource\" mixEffectBlockIndex=\"${1:0}\" source=\"${2:source/Key1/Key2/Background}\"/>",
+			"description" : "Select program input"
+	},
+	//
+	// HyperDeck operations
+	//
+	"HyperDeckSetSingleClip": {
+			"prefix": "HyperDeckSetSingleClip",
+			"body": "<Op id=\"HyperDeckSetSingleClip\" hyperDeckIndex=\"${1:0}\" singleClipEnabled=\"${2:True/False}\"/>",
+			"description" : "Set Hyperdeck to playback single clip only"
+	},
+	"HyperDeckSetSpeed": {
+			"prefix": "HyperDeckSetSpeed",
+			"body": "<Op id=\"HyperDeckSetSpeed\" hyperDeckIndex=\"${1:0}\" speedPercent=\"${2:1}\"/>",
+			"description" : "Set HyperDeck playback speed in percentage. E.g. 0.5 = 50%"
+	},
+	"HyperDeckPlay": {
+			"prefix": "HyperDeckPlay",
+			"body": "<Op id=\"HyperDeckPlay\" hyperDeckIndex=\"${1:0}\"/>",
+			"description" : "Start playing HyperDeck"
+	},
+	"HyperDeckStop": {
+			"prefix": "HyperDeckPlay",
+			"body": "<Op id=\"HyperDeckStop\" hyperDeckIndex=\"${1:0}\"/>",
+			"description" : "Start playing HyperDeck"
+	},
+	"HyperDeckAll": {
+			"prefix": "HyperDeckAll",
+			"body": [
+			"<Op id=\"HyperDeckSetSingleClip\" hyperDeckIndex=\"${1:0}\" singleClipEnabled=\"${2:True/False}\"/>",
+			"<Op id=\"HyperDeckSetSourceClipIndex\" hyperDeckIndex=\"${1:0}\" clipIndex=\"${2:ClipIndex}\"/>",
+			"<Op id=\"HyperDeckGoToPosition\" hyperDeckIndex=\"${1:0}\" hour=\"${2:hour}\" minute=\"${3:minute}\" second=\"${4:second}\" frame=\"${4:frame}\"/>",
+			"<Op id=\"HyperDeckSetLoop\" hyperDeckIndex=\"${1:0}\" loopEnabled=\"True/False\"/>"
+			"<Op id=\"HyperDeckSetSpeed\" hyperDeckIndex=\"${1:0}\" speedPercent=\"${2:1}\"/>",
+			"<Op id=\"HyperDeckPlay\" hyperDeckIndex=\"${1:0}\"/>",
+			"<Op id=\"HyperDeckStop\" hyperDeckIndex=\"${1:0}\"/>",
+			],
+			"description" : "Inset all HyperDeck operations"
+	}
+}

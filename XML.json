@@ -6,9 +6,13 @@
 			"prefix": "MacroProfile",
 			"body":	[
 			"<\?xml version=\"1.0\" encoding=\"UTF-8\"\?>",
-			"<Profile majorVersion=\"1\" minorVersion=\"3\" product=\"ATEM Television Studio\">"
+			"<Profile majorVersion=\"1\" minorVersion=\"3\" product=\"ATEM Television Studio\">",
+			"	<MixEffectBlocks/>",
+			"	<DownstreamKeys/>",
+			"	<ColorGenerators/>",
+			"	<MediaPlayers/>",
 			"	<MacroPool>",
-			"		<Macro id=\"0\" name=\"${1:name}\" description=\"${2:description}\">",
+			"		<Macro index=\"0\" name=\"${1:name}\" description=\"${2:description}\">",
 			"		</Macro>",
 			"	</MacroPool>",
 			"	<MacroControl loop=\"False\"/>",
@@ -19,7 +23,7 @@
 	"macro": {
 			"prefix": "Macro",
 			"body":	[
-			"<Macro id=\"${1:id}\" name=\"${2:name}\" description=\"${3:description}\">",
+			"<Macro index=\"${1:id}\" name=\"${2:name}\" description=\"${3:description}\">",
 			"</Macro>",
 			],
 			"description" : "Insert a new ATEM Macro"
@@ -34,22 +38,22 @@
 	//
 	"PreviewInput": {
 			"prefix": "Previewinput",
-			"body": "<Op id=\"PreviewInput\" mixEffectBlockIndex=\"${1:0}\" input=\"${2:input}\" />",
+			"body": "<Op id=\"PreviewInput\" mixEffectBlockIndex=\"${1:0}\" input=\"${2:input}\"/>",
 			"description" : "Select preview input"
 	},
 	"ProgramInput": {
 			"prefix": "Programinput",
-			"body": "<Op id=\"ProgramInput\" mixEffectBlockIndex=\"${1:0}\" input=\"${2:input}\" />",
+			"body": "<Op id=\"ProgramInput\" mixEffectBlockIndex=\"${1:0}\" input=\"${2:input}\"/>",
 			"description" : "Select program input"
 	},
 	"cut": {
 			"prefix": "Cut",
-			"body": "<Op id=\"Cut\" mixEffectBlockIndex=\"${1:0}\" />",
+			"body": "<Op id=\"Cut\" mixEffectBlockIndex=\"${1:0}\"/>",
 			"description" : "Select program input"
 	},
 	"Autotransition": {
 			"prefix": "Autotransition",
-			"body": "<Op id=\"Autotransition\" mixEffectBlockIndex=\"${1:0}\" />",
+			"body": "<Op id=\"Autotransition\" mixEffectBlockIndex=\"${1:0}\"/>",
 			"description" : "Select program input"
 	},
 	"TransitionSource": {

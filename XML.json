@@ -82,7 +82,8 @@
 			"<Op id=\"DownstreamKeyOnAir\" keyIndex=\"${1:0}\" onAir=\"${2:True/False}\"/>",
 			"<Op id=\"DownstreamKeyTie\" keyIndex=\"${1:0}\" tie=\"${2:True/False}\"/>",
 	],
-	}
+	"description" : "All DSK operations"
+	},
 	"DownstreamKeyFillInput": {
 			"prefix": "DSKFillInput",
 			"body": "<Op id=\"DownstreamKeyFillInput\" keyIndex=\"${1:0}\" input=\"${2:}\"/>",

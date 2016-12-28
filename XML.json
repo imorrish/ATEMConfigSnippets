@@ -58,6 +58,98 @@
 			"description" : "Select program input"
 	},
 	//
+	// Key operations
+	//
+	"DSKAll": {
+	"prefix": "DSKAll",
+	"body": [
+			"<Op id=\"DownstreamKeyFillInput\" keyIndex=\"${1:0}\" input=\"${2:}\"/>",
+			"<Op id=\"DownstreamKeyCutInput\" keyIndex=\"${1:0}\" input=\"${2:}\"/>",
+			"<Op id=\"DownstreamKeyMaskEnable\" keyIndex=\"${1:0}\" enable=\"${2:True/False}\"/>",
+			"<Op id=\"DownstreamKeyMaskLeft\" keyIndex=\"${1:0}\" left=\"${2:-16}\"/>",
+			"<Op id=\"DownstreamKeyMaskTop\" keyIndex=\"${1:0}\" top=\"${2:-9}\"/>",
+			"<Op id=\"DownstreamKeyMaskRight\" keyIndex=\"${1:0}\" right=\"${2:16}\"/>",
+			"<Op id=\"DownstreamKeyMaskBottom\" keyIndex=\"${1:0}\" bottom=\"${2:9}\"/>",
+			"<Op id=\"DownstreamKeyPreMultiply\" keyIndex=\"${1:0}\" preMultiply=\"${2:True/False}\"/>",
+			"<Op id=\"DownstreamKeyClip\" keyIndex=\"${1:0}\" clip=\"${2:0.0}\"/>",
+			"<Op id=\"DownstreamKeyGain\" keyIndex=\"${1:0}\" gain=\"${2:0.0}\"/>",
+			"<Op id=\"DownstreamKeyRate\" keyIndex=\"${1:0}\" rate=\"${2:50}\"/>",
+			"<Op id=\"DownstreamKeyAuto\" keyIndex=\"${1:0}\"/>",
+			"<Op id=\"DownstreamKeyOnAir\" keyIndex=\"${1:0}\" onAir=\"${2:True/False}\"/>",
+			"<Op id=\"DownstreamKeyTie\" keyIndex=\"${1:0}\" tie=\"${2:True/False}\"/>",
+	],
+	}
+	"DownstreamKeyFillInput": {
+			"prefix": "DSKFillInput",
+			"body": "<Op id=\"DownstreamKeyFillInput\" keyIndex=\"${1:0}\" input=\"${2:}\"/>",
+			"description" : "Set DSK input source"
+	},	
+	"DownstreamKeyCutInput": {
+			"prefix": "DSKCutInput",
+			"body": "<Op id=\"DownstreamKeyCutInput\" keyIndex=\"${1:0}\" input=\"${2:}\"/>",
+			"description" : "Set DSK cut source"
+	},
+	"DownstreamKeyMaskEnable": {
+			"prefix": "DSKMaskEnable",
+			"body": "<Op id=\"DownstreamKeyMaskEnable\" keyIndex=\"${1:0}\" enable=\"${2:True/False}\"/>",
+			"description" : "Set DSK Mask enable"
+	},
+	"DownstreamKeyMaskLeft": {
+			"prefix": "DSKMaskLeft",
+			"body": "<Op id=\"DownstreamKeyMaskLeft\" keyIndex=\"${1:0}\" left=\"${2:-16}\"/>",
+			"description" : "Set DSK Mask Left position"
+	},
+	"DownstreamKeyMaskTop": {
+			"prefix": "DSKMaskTop",
+			"body": "<Op id=\"DownstreamKeyMaskTop\" keyIndex=\"${1:0}\" top=\"${2:-9}\"/>",
+			"description" : "Set DSK Mask Top position"
+	},
+	"DownstreamKeyMaskRight": {
+			"prefix": "DSKMaskRight",
+			"body": "<Op id=\"DownstreamKeyMaskRight\" keyIndex=\"${1:0}\" right=\"${2:16}\"/>",
+			"description" : "Set DSK Mask Right position"
+	},
+	"DownstreamKeyMaskBottom": {
+			"prefix": "DSKMaskBottom",
+			"body": "<Op id=\"DownstreamKeyMaskBottom\" keyIndex=\"${1:0}\" bottom=\"${2:9}\"/>",
+			"description" : "Set DSK Mask Bottom position"
+	},
+	"DownstreamKeyPreMultiply": {
+			"prefix": "DSKPreMultiply",
+			"body": "<Op id=\"DownstreamKeyPreMultiply\" keyIndex=\"${1:0}\" preMultiply=\"${2:True/False}\"/>",
+			"description" : "Set DSK preMultiply"
+	},	
+	"DownstreamKeyClip": {
+			"prefix": "DSKClip",
+			"body": "<Op id=\"DownstreamKeyClip\" keyIndex=\"${1:0}\" clip=\"${2:0.0}\"/>",
+			"description" : "Set DSK Clip value 0.0-1.0"
+	},
+	"DownstreamKeyGain": {
+			"prefix": "DSKGain",
+			"body": "<Op id=\"DownstreamKeyGain\" keyIndex=\"${1:0}\" gain=\"${2:0.0}\"/>",
+			"description" : "Set DSK Gain value 0.0-1.0"
+	},
+	"DownstreamKeyRate": {
+			"prefix": "DSKRate",
+			"body": "<Op id=\"DownstreamKeyRate\" keyIndex=\"${1:0}\" rate=\"${2:50}\"/>",
+			"description" : "Set DSK Rate value fps"
+	},		
+	"DownstreamKeyAuto": {
+			"prefix": "DSKAuto",
+			"body": "<Op id=\"DownstreamKeyAuto\" keyIndex=\"${1:0}\"/>",
+			"description" : "Set DSK Auto On-air"
+	},
+	"DownstreamKeyOnAir": {
+			"prefix": "DSKOnAir",
+			"body": "<Op id=\"DownstreamKeyOnAir\" keyIndex=\"${1:0}\" onAir=\"${2:True/False}\"/>",
+			"description" : "Set DSK On-air"
+	},
+	"DownstreamKeyTie": {
+			"prefix": "DSKTie",
+			"body": "<Op id=\"DownstreamKeyTie\" keyIndex=\"${1:0}\" tie=\"${2:True/False}\"/>",
+			"description" : "Set DSK Tie to next transition"
+	},	
+	//
 	// HyperDeck operations
 	//
 	"HyperDeckSetSingleClip": {

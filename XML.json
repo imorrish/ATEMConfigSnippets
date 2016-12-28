@@ -62,7 +62,7 @@
 			"description" : "Select program input"
 	},
 	//
-	// Key operations
+	// DSK operations
 	//
 	"DSKAll": {
 	"prefix": "DSKAll",
@@ -153,6 +153,127 @@
 			"body": "<Op id=\"DownstreamKeyTie\" keyIndex=\"${1:0}\" tie=\"${2:True/False}\"/>",
 			"description" : "Set DSK Tie to next transition"
 	},	
+	//
+	// USK operations
+	//
+	"KeyType": {
+			"prefix": "KeyType",
+			"body": "<Op id=\"KeyType\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" type=\"${3:Luma/Chroma/Pattern}\"/>",
+			"description" : "Set USK Type"
+	},	
+	"KeyFillInput": {
+			"prefix": "KeyFillInput",
+			"body": "<Op id=\"KeyFillInput\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" input=\"${3:MediaPlayer1}\"/>",
+			"description" : "Set USK Fill Input"
+	},
+	"KeyCutInput": {
+			"prefix": "KeyCutInput",
+			"body": "<Op id=\"KeyCutInput\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" input=\"${3:MediaPlayer1Key}\"/>",
+			"description" : "Set USK Fill Input"
+	},
+	//
+	// Chroma values
+	//
+	"ChromaKeyHue": {
+			"prefix": "ChromaKeyHue",
+			"body": "<Op id=\"ChromaKeyHue\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" hue=\"${3:0}\"/>",
+			"description" : "Set USK Chroma Hue (0 to 360)"
+	},
+	"ChromaKeyGain": {
+			"prefix": "ChromaKeyGain",
+			"body": "<Op id=\"ChromaKeyGain\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" gain=\"${3:0}\"/>",
+			"description" : "Set USK Chroma Gain (0 to 1)"
+	},
+	"ChromaKeyClip": {
+			"prefix": "ChromaKeyClip",
+			"body": "<Op id=\"ChromaKeyClip\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" clip=\"${3:0}\"/>",
+			"description" : "Set USK Chroma Clip (0 to 1)"
+	},
+	"ChromaKeyLift": {
+			"prefix": "ChromaKeyLift",
+			"body": "<Op id=\"ChromaKeyLift\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" lift=\"${3:0}\"/>",
+			"description" : "Set USK Chroma Lift (0 to 1)"
+	},
+	//
+	// Luma values
+	//
+	"LumaKeyPreMultiply": {
+			"prefix": "LumaKeyPreMultiply",
+			"body": "<Op id=\"LumaKeyPreMultiply\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" LumaKeyPreMultiply=\"${3:True/False}\"/>",
+			"description" : "Set USK Luma Key Pre-multiplied?"
+	},
+	"LumaKeyGain": {
+			"prefix": "LumaKeyGain",
+			"body": "<Op id=\"LumaKeyGain\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" gain=\"${3:0}\"/>",
+			"description" : "Set USK Luma key gain (0 to 1)"
+	},
+	"LumaKeyClip": {
+			"prefix": "LumaKeyClip",
+			"body": "<Op id=\"LumaKeyClip\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" clip=\"${3:0}\"/>",
+			"description" : "Set USK Luma Key Clip (0 to 1)"
+	},
+	"LumaKeyInvert": {
+			"prefix": "LumaKeyInvert",
+			"body": "<Op id=\"LumaKeyInvert\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" invert=\"${3:True/False}\"/>",
+			"description" : "Set USK Luma Key Invert?"
+	},
+	//
+	// Pattern values
+	//
+	"PatternKeyPattern": {
+			"prefix": "PatternKeyPattern",
+			"body": "<Op id=\"PatternKeyPattern\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" pattern=\"${2:TopLeftDiagonal}\"/>",
+			"description" : "Set USK Pattern Key Pattern "
+	},
+	"PatternKeySize": {
+			"prefix": "PatternKeySize",
+			"body": "<Op id=\"PatternKeySize\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" size=\"${2:0}\"/>",
+			"description" : "Set USK Pattern Key Size (0 to 1)"
+	},
+	"PatternKeySymmetry": {
+			"prefix": "PatternKeySymmetry",
+			"body": "<Op id=\"PatternKeySymmetry\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" symmetry=\"${2:0}\"/>",
+			"description" : "Set USK Pattern Key Symmetry (0 to 1)"
+	},
+	
+	"KeyMaskEnable": {
+			"prefix": "KeyMaskEnable",
+			"body": "<Op id=\"KeyMaskEnable\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" enable=\"${2:True/False}\"/>",
+			"description" : "Set USK Mask enable"
+	},
+	"KeyMaskLeft": {
+			"prefix": "KeyMaskLeft",
+			"body": "<Op id=\"KeyMaskLeft\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" left=\"${2:-16}\"/>",
+			"description" : "Set USK Mask Left (-16 to 16)"
+	},
+	"KeyMaskTop": {
+			"prefix": "KeyMaskTop",
+			"body": "<Op id=\"KeyMaskTop\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" top=\"${2:9}\"/>",
+			"description" : "Set USK Mask Top (9 to -9)"
+	},
+	"KeyMaskRight": {
+			"prefix": "KeyMaskRight",
+			"body": "<Op id=\"KeyMaskRight\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" right=\"${2:16}\"/>",
+			"description" : "Set USK Mask Right (16 to -16)"
+	},
+	"KeyMaskBottom": {
+			"prefix": "KeyMaskBottom",
+			"body": "<Op id=\"KeyMaskBottom\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" bottom=\"${2:-9}\"/>",
+			"description" : "Set USK Mask Bottom (-9 to 9)"
+	},
+	//
+	// Key options
+	//
+	"TransitionSource": {
+			"prefix": "TransitionSource",
+			"body": "<Op id=\"TransitionSource\" mixEffectBlockIndex=\"${1:0}\" source=\"${2:Background, Key1, Key2}\"/>",
+			"description" : "Set USK transition Source (any combination of vales including no values)"
+	},
+	"KeyOnAir": {
+			"prefix": "KeyOnAir",
+			"body": "<Op id=\"KeyOnAir\" mixEffectBlockIndex=\"${1:0}\"  keyIndex=\"${2:0}\" onAir="${3:True/False}\"/>",
+			"description" : "Set USK on-Air"
+	},
 	//
 	// HyperDeck operations
 	//

@@ -13,3 +13,4 @@ Just copy the xml.jason file to the default location based on your OS:
     Linux: $HOME/.config/Code/User/snippets/
 
 Once the snippet is more complete I'll publish it to the VS-Code gallery.
+!(https://github.com/imorrish/ATEMConfigSnippets/blob/master/MacroSnippet.gif?raw=true)

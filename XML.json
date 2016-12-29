@@ -1,11 +1,12 @@
 {
-	//
+	// Snippet file for VS-Code
+	// 
 	//	Main macro section
 	//
 	"macroprofile": {
 			"prefix": "MacroProfile",
 			"body":	[
-			"<\?xml version=\"1.0\" encoding=\"UTF-8\"\?>",
+			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
 			"<Profile majorVersion=\"1\" minorVersion=\"3\" product=\"ATEM Television Studio\">",
 			"	<MixEffectBlocks/>",
 			"	<DownstreamKeys/>",
@@ -16,7 +17,7 @@
 			"		</Macro>",
 			"	</MacroPool>",
 			"	<MacroControl loop=\"False\"/>",
-			"</profile>",
+			"</profile>"
 			],
 			"description" : "Create a new XML file dedicated to a macro profile"
 	},
@@ -24,7 +25,7 @@
 			"prefix": "Macro",
 			"body":	[
 			"<Macro index=\"${1:id}\" name=\"${2:name}\" description=\"${3:description}\">",
-			"</Macro>",
+			"</Macro>"
 			],
 			"description" : "Insert a new ATEM Macro"
 	},
@@ -56,11 +57,6 @@
 			"body": "<Op id=\"Autotransition\" mixEffectBlockIndex=\"${1:0}\"/>",
 			"description" : "Select program input"
 	},
-	"TransitionSource": {
-			"prefix": "TransitionSource",
-			"body": "<Op id=\"TransitionSource\" mixEffectBlockIndex=\"${1:0}\" source=\"${2:source/Key1/Key2/Background}\"/>",
-			"description" : "Select program input"
-	},
 	//
 	// DSK operations
 	//
@@ -80,7 +76,7 @@
 			"<Op id=\"DownstreamKeyRate\" keyIndex=\"${1:0}\" rate=\"${2:50}\"/>",
 			"<Op id=\"DownstreamKeyAuto\" keyIndex=\"${1:0}\"/>",
 			"<Op id=\"DownstreamKeyOnAir\" keyIndex=\"${1:0}\" onAir=\"${2:True/False}\"/>",
-			"<Op id=\"DownstreamKeyTie\" keyIndex=\"${1:0}\" tie=\"${2:True/False}\"/>",
+			"<Op id=\"DownstreamKeyTie\" keyIndex=\"${1:0}\" tie=\"${2:True/False}\"/>"
 	],
 	"description" : "All DSK operations"
 	},
@@ -236,7 +232,6 @@
 			"body": "<Op id=\"PatternKeySymmetry\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" symmetry=\"${2:0}\"/>",
 			"description" : "Set USK Pattern Key Symmetry (0 to 1)"
 	},
-	
 	"KeyMaskEnable": {
 			"prefix": "KeyMaskEnable",
 			"body": "<Op id=\"KeyMaskEnable\" mixEffectBlockIndex=\"${1:0}\" keyIndex=\"${2:0}\" enable=\"${2:True/False}\"/>",
@@ -272,7 +267,7 @@
 	},
 	"KeyOnAir": {
 			"prefix": "KeyOnAir",
-			"body": "<Op id=\"KeyOnAir\" mixEffectBlockIndex=\"${1:0}\"  keyIndex=\"${2:0}\" onAir="${3:True/False}\"/>",
+			"body": "<Op id=\"KeyOnAir\" mixEffectBlockIndex=\"${1:0}\"  keyIndex=\"${2:0}\" onAir=\"${3:True/False}\"/>",
 			"description" : "Set USK on-Air"
 	},
 	//
@@ -304,10 +299,10 @@
 			"<Op id=\"HyperDeckSetSingleClip\" hyperDeckIndex=\"${1:0}\" singleClipEnabled=\"${2:True/False}\"/>",
 			"<Op id=\"HyperDeckSetSourceClipIndex\" hyperDeckIndex=\"${1:0}\" clipIndex=\"${2:ClipIndex}\"/>",
 			"<Op id=\"HyperDeckGoToPosition\" hyperDeckIndex=\"${1:0}\" hour=\"${2:hour}\" minute=\"${3:minute}\" second=\"${4:second}\" frame=\"${4:frame}\"/>",
-			"<Op id=\"HyperDeckSetLoop\" hyperDeckIndex=\"${1:0}\" loopEnabled=\"True/False\"/>"
+			"<Op id=\"HyperDeckSetLoop\" hyperDeckIndex=\"${1:0}\" loopEnabled=\"True/False\"/>",
 			"<Op id=\"HyperDeckSetSpeed\" hyperDeckIndex=\"${1:0}\" speedPercent=\"${2:1}\"/>",
 			"<Op id=\"HyperDeckPlay\" hyperDeckIndex=\"${1:0}\"/>",
-			"<Op id=\"HyperDeckStop\" hyperDeckIndex=\"${1:0}\"/>",
+			"<Op id=\"HyperDeckStop\" hyperDeckIndex=\"${1:0}\"/>"
 			],
 			"description" : "Inset all HyperDeck operations"
 	}

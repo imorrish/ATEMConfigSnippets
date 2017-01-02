@@ -1,0 +1,21 @@
+ {
+    "name": "ATEM-Macro",
+    "publisher": "imorrish",
+    "description": "Blackmagic Design ATEM Macro snippets",
+    "version": "0.1.0",
+    "engines": { "vscode": "0.10.x" },
+    "homepage": "https://github.com/imorrish/ATEMConfigSnippets/blob/master/README.md",
+    	"repository": {
+		"type": "git",
+		"url": "https://github.com/imorrish/ATEMConfigSnippets.git"
+	},
+    "categories": ["Snippets"], 
+    "contributes": {
+        "snippets": [
+            {
+                "language": "xml",
+                "path": "./snippets/xml.json"
+            }
+        ]
+    }
+} 

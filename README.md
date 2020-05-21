@@ -1,5 +1,6 @@
 # ATEMConfigSnippets
 Visual Studio Code Snippet file for Blackmagic ATEM Configuration XML file
+This has now been published to the market place. See https://ianmorrish.wordpress.com/2019/10/06/atem-macro-editing-snippets-for-vscode/
 
 The Blackmagic ATEM software allows users to export all or a subset of the switcher configuration as an XML file. This can be useful for manipulating complex functions such as keyers and DVE options but has become even more important with the support for macros.
 The ATEM software allows recording of simple macros by watching what you do in the software or hardware panel but these macros will often require some post editing to get them working just the way you want.
